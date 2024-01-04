@@ -237,11 +237,11 @@ Const
  VICSCN=$0400;
 
 Function  ColorDistance(r1,g1,b1,r2,g2,b2:Integer):Real;
-Procedure SplitRGB(RGB:Integer;Var R,G,B:Byte);
+Procedure SplitRGB(RGB:LongInt;Var R,G,B:Byte);
 
 IMPLEMENTATION
 
-Procedure SplitRGB(RGB:Integer;Var R,G,B:Byte);Begin
+Procedure SplitRGB(RGB:LongInt;Var R,G,B:Byte);Begin
  R:=(RGB shr 16) and $FF;
  G:=(RGB shr 8) and $FF;
  B:=RGB and $FF;
